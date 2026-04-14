@@ -1,7 +1,8 @@
 # Build inside the correct Docker image
 # AWS publishes Glue container images on ECR Public. Use them to guarantee compatibility.
 
-```docker run --rm \
+```bash
+docker run --rm \
   -v $(pwd)/dist:/output \
   amazon/aws-glue-libs:glue_libs_4.0.0_image_01 \
   /bin/bash -c "
